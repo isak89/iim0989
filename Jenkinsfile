@@ -15,6 +15,9 @@ pipeline {
     {
         shell 'docker build . -t test3'
     }
+          stage('run containers') {
+                      sh('docker-compose -d up')
+                }
     }
 }
     }
