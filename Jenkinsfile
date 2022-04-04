@@ -16,14 +16,10 @@ pipeline {
     {
         shell 'docker build . -t test3'
     }
-          stages {
-          stage ('run docker-compose') {
-                 steps {
-                    shell ' docker-compose up -d'
+      steps {
+          shell 'docker-compose up -d'
                  }
 }
-}
     }
     }
-}
 }
