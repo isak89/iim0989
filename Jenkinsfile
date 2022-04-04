@@ -15,3 +15,4 @@ pipeline {
         sh 'docker build -t postgres -f $WORKSPACE/CI_CD/Dockerfile .'
     }
 }
+}
