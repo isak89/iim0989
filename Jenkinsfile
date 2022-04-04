@@ -16,8 +16,8 @@ pipeline {
     {
         shell 'docker build . -t test3'
     }
-    dir {"/"
-          shell 'docker-compose up -d'
+          {
+             shell 'docker-compose up -d'
                  }
 }
     }
