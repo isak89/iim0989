@@ -15,14 +15,6 @@ pipeline {
     {
         shell 'docker build . -t test3'
     }
-          {
-          agent any
-          stage('Stage 2') {
-      steps {
-             shell 'docker-compose up -d'
-                 }
-}
-    }
     }
 }
     }
