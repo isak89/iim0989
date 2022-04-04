@@ -3,7 +3,7 @@ pipeline {
     stage('Building Docker Image') {
    # Creating and running the first one
          dir ('/ubuntu_nginx/') {
-         sh 'docker build -t . tes1'
+         sh 'docker build -t . test1'
    }
 
    # Creating and running the first one
