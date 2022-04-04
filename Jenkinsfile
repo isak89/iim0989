@@ -2,6 +2,7 @@ pipeline {
    agent any
     stages {
     stage('Build images'){
+       steps{
     echo "workspace directory is ${workspace}"
     dir ("$workspace/ubuntu_nginx/")
     {
@@ -15,6 +16,7 @@ pipeline {
     {
         sh 'docker build -t postgres -f $WORKSPACE/CI_CD/Dockerfile .'
     }
+}
 }
 }
 }
