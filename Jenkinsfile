@@ -10,8 +10,7 @@ pipeline {
     dir ("/ubuntu_nginx/")
     {
         shell 'docker build . -t test1'
-    }
-   
+    } 
     dir ("/CI_CD/")
     {
         shell 'docker build . -t test3'
