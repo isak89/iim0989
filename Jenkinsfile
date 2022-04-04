@@ -19,7 +19,6 @@ pipeline {
           agent any
           stage('Stage 2') {
       steps {
-          {
              shell 'docker-compose up -d'
                  }
 }
