@@ -1,19 +1,17 @@
 pipeline {
     agent any
-    stage('Building Docker Image') {
-   # Creating and running the first one
-         dir ('/ubuntu_nginx/') {
-         sh 'docker build -t . test1'
-   }
-
-   # Creating and running the first one
-         dir ('/centos_ubuntu/') {
-         sh 'docker build -t . test2'
-   }
-
-   # Creating and running the first one
-         dir ('/CI_CD/') {
-         sh 'docker build -t . test3'            
-   }
-
+    stage('Build images'){
+    echo "workspace directory is ${workspace}"
+    dir ("$workspace/ubuntu_nginx/")
+    {
+        sh 'docker build -t test1 -f $WORKSPACE/ubuntu_nginx/Dockerfile .'
+    }
+    dir ("$workspace/centos_ubuntu/")
+    {
+        sh 'docker build -t test2 -f $WORKSPACE/centos_ubuntu/Dockerfile .'
+    }
+    dir ("$workspace/CI_CD/Dockerfile")
+    {
+        sh 'docker build -t postgres -f $WORKSPACE/CI_CD/Dockerfile .'
+    }
 }
