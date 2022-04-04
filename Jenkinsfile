@@ -13,7 +13,7 @@ pipeline {
     }
     dir ("/CI_CD/")
     {
-        sh 'docker build . -t test3 '
+        sh 'docker build . -t test3'
     }
 }
 }
