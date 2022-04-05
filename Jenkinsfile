@@ -15,7 +15,6 @@ pipeline {
     {
         shell 'docker build . -t test3'
     }
-     }
     stage("run compose"){
         steps{
             shell ' docker-compose up -f docker-compose.yml -d '
