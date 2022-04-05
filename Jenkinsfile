@@ -15,10 +15,10 @@ pipeline {
     {
         shell 'docker build . -t test3'
     }
-          {
-          stage('run containers') {
-                      sh('docker-compose -d up')
-                }
+     }
+    stage("run compose"){
+        steps{
+            shell ' docker-compose up -f docker-compose.yml -d '
     }
 }
     }
