@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  app01:
+    image: ubuntu/nginx
+  app02:
+    image: centos/nginx
+  app03:
+    image: ubuntu/postgresql
+  app04:
+    image: centos/postgresql
+  app05:
+    image: ubuntu/nginx

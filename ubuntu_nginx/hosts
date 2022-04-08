@@ -1,0 +1,5 @@
+172.50.0.11 ansible_connection=ssh
+172.50.0.12 ansible_connection=ssh
+172.50.0.13 ansible_connection=ssh
+172.50.0.18 ansible_connection=ssh
+172.50.0.31 ansible_connection=ssh
